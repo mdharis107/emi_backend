@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors")
 const { emiRouter } = require("./routes/emi.routes");
 const { authentication } = require("./middlewares/authentication");
-const { UserModel } = require("./models/user.model");
+// const { UserModel } = require("./models/user.model");
 
 const app = express();
 
