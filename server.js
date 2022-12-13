@@ -3,6 +3,7 @@ const { connection } = require("./config/db");
 const { UserModel } = require("./models/user.model");
 const  bcrypt  = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const cors = require("cors")
 const { emiRouter } = require("./routes/emi.routes");
 const { authentication } = require("./middlewares/authentication");
 
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
   res.send("The Home Page of the Application");
 });
 
+app.use(cors())
 //sign up
 
 app.post("/signup", async (req, res) => {
