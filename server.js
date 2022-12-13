@@ -1,11 +1,12 @@
 const express = require("express");
 const { connection } = require("./config/db");
-const { UserModel } = require("./models/user.model");
+
 const  bcrypt  = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const cors = require("cors")
 const { emiRouter } = require("./routes/emi.routes");
 const { authentication } = require("./middlewares/authentication");
+const { UserModel } = require("./models/user.model");
 
 const app = express();
 
