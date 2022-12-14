@@ -1,6 +1,4 @@
 const { Router } = require("express");
-
-
 const emiRouter = Router();
 
 emiRouter.post("/calculate", async (req, res) => {
